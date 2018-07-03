@@ -4,9 +4,9 @@
 #include <winsock2.h>
 #endif
 
-#include "ofxBlackmagic/Iterator.h"
-#include "ofxBlackmagic/Input.h"
-#include "ofxBlackmagic/Output.h"
-#include "ofxBlackmagic/DeviceList.h"
+#include "Iterator.h"
+#include "Input.h"
+#include "Output.h"
+#include "DeviceList.h"
 
 #undef small
