@@ -1,1 +1,1 @@
-ofxBlackmagic3
+ofxBlackmagic2
