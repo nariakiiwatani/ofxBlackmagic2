@@ -3,7 +3,7 @@ ofxBlackmagic2
 
 <img src="https://raw.github.com/elliotwoods/ofxBlackmagic2/master/ofxaddons_thumbnail.png" />
 
-This fork of Elliot Woods ofxBlackmagic2 addon for openframeworks has been altered to work with openframeworks 0.1.0 and vs2017 as well as working with the project generator, it no longer adheres to Elliot Wood's addon pattern (sorry, great system, but I neeeded a fast fix) and does not require ofxaddonlib.
+This fork of Elliot Woods ofxBlackmagic2 addon for openframeworks has been altered to **work with openframeworks 0.10.x and vs2017** as well as working with the project generator, it no longer adheres to Elliot Wood's addon pattern (sorry, great system, but I neeeded a fast fix) and does not require ofxaddonlib.
 
 Features:
 
