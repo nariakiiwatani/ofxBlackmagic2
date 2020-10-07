@@ -1,5 +1,5 @@
 #pragma once
-#include <ofxBlackmagic2\src\ofxBlackMagic.h>
+#include "ofxBlackMagic.h"
 class BlackMagicHelper
 {
 private:
