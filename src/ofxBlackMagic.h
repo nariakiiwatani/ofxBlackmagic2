@@ -7,6 +7,7 @@
 #include "Iterator.h"
 #include "Input.h"
 #include "Output.h"
+#include "Grabber.h"
 #include "DeviceList.h"
 
 #undef small
