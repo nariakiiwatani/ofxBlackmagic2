@@ -53,3 +53,47 @@ BMDDisplayMode BlackMagicHelper::GetDisplayMode(int Width, int Height, float Fra
 
 	return BMDDisplayMode::bmdModeUnknown;
 }
+
+
+std::map<std::string, BMDDisplayMode> BlackMagicHelper::DisplayModesMap = {
+	{ "bmdModeNTSC", bmdModeNTSC },
+	{ "bmdModeNTSC2398", bmdModeNTSC2398 },
+	{ "bmdModePAL", bmdModePAL },
+	{ "bmdModeNTSCp", bmdModeNTSCp },
+	{ "bmdModePALp", bmdModePALp },
+	{ "bmdModeHD1080p2398", bmdModeHD1080p2398 },
+	{ "bmdModeHD1080p24", bmdModeHD1080p24 },
+	{ "bmdModeHD1080p25", bmdModeHD1080p25 },
+	{ "bmdModeHD1080p2997", bmdModeHD1080p2997 },
+	{ "bmdModeHD1080p30", bmdModeHD1080p30 },
+	{ "bmdModeHD1080i50", bmdModeHD1080i50 },
+	{ "bmdModeHD1080i5994", bmdModeHD1080i5994 },
+	{ "bmdModeHD1080i6000", bmdModeHD1080i6000 },
+	{ "bmdModeHD1080p50", bmdModeHD1080p50 },
+	{ "bmdModeHD1080p5994", bmdModeHD1080p5994 },
+	{ "bmdModeHD1080p6000", bmdModeHD1080p6000 },
+	{ "bmdModeHD720p50", bmdModeHD720p50 },
+	{ "bmdModeHD720p5994", bmdModeHD720p5994 },
+	{ "bmdModeHD720p60", bmdModeHD720p60 },
+	{ "bmdMode2k2398", bmdMode2k2398 },
+	{ "bmdMode2k24", bmdMode2k24 },
+	{ "bmdMode2k25", bmdMode2k25 },
+	{ "bmdMode4K2160p2398", bmdMode4K2160p2398 },
+	{ "bmdMode4K2160p24", bmdMode4K2160p24 },
+	{ "bmdMode4K2160p25", bmdMode4K2160p25 },
+	{ "bmdMode4K2160p2997", bmdMode4K2160p2997 },
+	{ "bmdMode4K2160p30", bmdMode4K2160p30 },
+	{ "bmdMode4kDCI2398", bmdMode4kDCI2398 },
+	{ "bmdMode4kDCI24", bmdMode4kDCI24 },
+	{ "bmdMode4kDCI25", bmdMode4kDCI25 },
+	{ "bmdModeUnknown", bmdModeUnknown }
+};
+//Returns the corresponding BlackMagic display mode - returns bmdModeUnknown on error
+BMDDisplayMode BlackMagicHelper::GetDisplayMode(const std::string &mode_str)
+{
+	auto found = DisplayModesMap.find(mode_str);
+	if(found == std::end(DisplayModesMap)) {
+		return bmdModeUnknown;
+	}
+	return found->second;
+}
