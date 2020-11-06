@@ -36,8 +36,8 @@ public:
 		return input_.isRunning();
 	}
 	void update() { input_.update(); }
-	float getHeight() const { return input_.getWidth(); }
-	float getWidth() const { return input_.getHeight(); }
+	float getWidth() const { return input_.getWidth(); }
+	float getHeight() const { return input_.getHeight(); }
 	bool isFrameNew() const { return input_.isFrameNew(); };
 	void close() { input_.stopCapture(); }
 	bool isInitialized() const { return input_.isRunning(); }
